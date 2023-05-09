@@ -1,1 +1,2 @@
-pynput
+pynput==1.7.6
+setuptools==59.6.0

@@ -65,7 +65,7 @@ def define_custom_seconds():
         move_mouse_every_seconds = int(args.seconds)
 
     if args.pixels:
-        PIXELS_TO_MOVE = int(args.pixels)
+        PIXELS_TO_MOVE = int(args.pixels / 2)
 
     if args.circular:
         MOUSE_DIRECTION_DELTA = 1
@@ -142,6 +142,7 @@ def execute_keep_awake_action():
     print(get_now_timestamp(), 'Idle detection')
 
     if MOVE_MOUSE:
+        move_mouse()
         move_mouse()
 
     if PRESS_SHIFT_KEY:
